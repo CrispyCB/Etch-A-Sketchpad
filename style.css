@@ -9,6 +9,7 @@ body {
 #sketchpad {
     width: 960px;
     height: 960px;
+    background-color: #ffffff;
 }
 .sketch-cell {
     height: 60px;
