@@ -16,12 +16,5 @@ for (j= 0; j < columns;j++){
     columndiv.classList.add("flex-column");
     console.log(j);
 }
-var rowArray = sketchpad.querySelectorAll("flex-row");
-rowArray.forEach(rowdiv => {
-    for (k = 0; k < columns; k++) {
-        rowdiv.appendChild(columndiv);
-        console.log(k);
-    }
-})
 };
 ColorChange();
