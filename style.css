@@ -11,8 +11,7 @@ body {
     width: 960px;
     height: 745px;
     background-color: #ffffff;
-    display: grid;
-    grid-template-columns: 240px 240px 240px 240px;
+    display: flex;
 }
 .sketch-cell {
     border: 1px solid #76ff03;
