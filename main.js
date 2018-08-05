@@ -6,6 +6,7 @@ let columns = 4;
 for (i = 0; i < rows; i++){
     const rowdiv = document.createElement("div");
     rowdiv.style.display = "flex";
+    rowdiv.style.width = 960 + "px";
     rowdiv.classList.add("flex-row");
     sketchpad.appendChild(rowdiv);
     console.log(i);
