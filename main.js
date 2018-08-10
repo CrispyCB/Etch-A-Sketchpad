@@ -19,7 +19,7 @@ rowArray.forEach(rowdiv => {
     columndiv.classList.add("flex-column");
     columndiv.addEventListener("mouseover",()=>{
         columndiv.style.backgroundColor = "black";
-    })
+    });
     rowdiv.appendChild(columndiv);
     console.log(j);
 }
