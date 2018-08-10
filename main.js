@@ -17,6 +17,9 @@ rowArray.forEach(rowdiv => {
     const columndiv = document.createElement("div");
     columndiv.style.display = "flex";
     columndiv.classList.add("flex-column");
+    columndiv.addEventListener("mouseover",()=>{
+        columndiv.style.backgroundColor = "black";
+    })
     rowdiv.appendChild(columndiv);
     console.log(j);
 }
