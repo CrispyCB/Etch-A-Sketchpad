@@ -1,10 +1,10 @@
 const sketchpad = document.getElementById("sketchpad");
+let rows = 4;
+let columns = 4;
 let columnheight = (745/columns) - 5;
 let columnwidth = 960/columns;
 let rowheight = 745/rows;
 function ColorChange (){
-let rows = 4;
-let columns = 4;
 for (i = 0; i < rows; i++){
     const rowdiv = document.createElement("div");
     rowdiv.style.display = "flex";
