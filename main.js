@@ -1,13 +1,13 @@
 const sketchpad = document.getElementById("sketchpad");
 let rows = 4;
 let columns = 4;
-let columnheight = (745/columns) - 5;
+let columnheight = (745/columns);
 let columnwidth = 960/columns;
 let rowheight = 745/rows;
 function ColorChange (){
 for (i = 0; i < rows; i++){
     const rowdiv = document.createElement("div");
-    rowdiv.style.display = "flex";
+    rowdiv.style.display = "inline-grid";
     rowdiv.style.width = 960 + "px";
     rowdiv.style.height = rowheight;
     rowdiv.classList.add("flex-row");
