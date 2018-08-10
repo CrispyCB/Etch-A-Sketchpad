@@ -10,7 +10,9 @@ body {
     display: inline-block;
 }
 #sketchpad {
-    margin: 0 auto;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: -2.5%;
     width: 960px;
     height: 745px;
     background-color: #ffffff;
