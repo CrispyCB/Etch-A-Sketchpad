@@ -29,4 +29,15 @@ rowArray.forEach(rowdiv => {
     console.log(j);
 }
 })};
+function ChangeRowsColumns () {
+    const button1 = document.getElementById("rows");
+    const button2 = document.getElementById("columns");
+    button1.addEventListener("click",function buttonchange () {
+        rows = prompt("Set the number of rows:");
+    })
+    button2.addEventListener("click",function buttonchange2 (){
+        columns = prompt("Set the number of columns:")
+    })
+}
+ChangeRowsColumns ();
 ColorChange();
