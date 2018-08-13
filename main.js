@@ -36,7 +36,7 @@ function ChangeRowsColumns () {
         rows = window.prompt("Set the number of rows:");
     })
     button2.addEventListener("click",function buttonchange2 (){
-        columns = window.prompt("Set the number of columns:")
+        columns = window.prompt("Set the number of columns:");
     })
 }
 ChangeRowsColumns ();
