@@ -1,7 +1,7 @@
 const sketchpad = document.getElementById("sketchpad");
 let rows = 4;
 let columns = 4;
-let columnheight = (745/columns);
+let columnheight = (720/columns);
 let columnwidth = 960/columns;
 let rowheight = 745/rows;
 function ColorChange (){
