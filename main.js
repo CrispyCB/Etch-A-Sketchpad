@@ -9,11 +9,11 @@ function ChangeRowsColumns () {
     const button2 = document.getElementById("columns");
     button1.addEventListener("click",function buttonchange () {
         console.log("called rows");
-        rows = window.prompt("Set the number of rows:");
+        rows = Number(window.prompt("Set the number of rows:"));
     })
     button2.addEventListener("click",function buttonchange2 (){
         console.log("called columns");
-        columns = window.prompt("Set the number of columns:");
+        columns = Number(window.prompt("Set the number of columns:"));
     })
 };
 function ColorChange (){
