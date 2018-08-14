@@ -4,6 +4,18 @@ let columns = 4;
 let columnheight = (720/columns);
 let columnwidth = 960/columns;
 let rowheight = 745/rows;
+function ChangeRowsColumns () {
+    const button1 = document.getElementById("rows");
+    const button2 = document.getElementById("columns");
+    button1.addEventListener("click",function buttonchange () {
+        console.log("called rows");
+        rows = window.prompt("Set the number of rows:");
+    })
+    button2.addEventListener("click",function buttonchange2 (){
+        console.log("called columns");
+        columns = window.prompt("Set the number of columns:");
+    })
+};
 function ColorChange (){
 for (i = 0; i < rows; i++){
     const rowdiv = document.createElement("div");
@@ -13,7 +25,7 @@ for (i = 0; i < rows; i++){
     rowdiv.classList.add("flex-row");
     sketchpad.appendChild(rowdiv);
     console.log(i);
-}
+};
 let rowArray = sketchpad.querySelectorAll(".flex-row");
 rowArray.forEach(rowdiv => {
     for (j= 0; j < columns;j++){
@@ -27,17 +39,8 @@ rowArray.forEach(rowdiv => {
     });
     rowdiv.appendChild(columndiv);
     console.log(j);
-}
+};
 })};
-function ChangeRowsColumns () {
-    const button1 = document.getElementById("rows");
-    const button2 = document.getElementById("columns");
-    button1.addEventListener("click",function buttonchange () {
-        rows = window.prompt("Set the number of rows:");
-    })
-    button2.addEventListener("click",function buttonchange2 (){
-        columns = window.prompt("Set the number of columns:");
-    })
-}
+
 ChangeRowsColumns ();
 ColorChange();
