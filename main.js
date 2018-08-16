@@ -4,7 +4,6 @@ let columns = 4;
 let columnheight = (720/columns);
 let columnwidth = 960/columns;
 let rowheight = 745/rows;
-function ChangeRowsColumns () {
     const button1 = document.getElementById("rows");
     const button2 = document.getElementById("columns");
     button1.addEventListener("click",function buttonchange () {
@@ -15,7 +14,7 @@ function ChangeRowsColumns () {
         console.log("called columns");
         columns = Number(window.prompt("Set the number of columns:"));
     })
-};
+
 function ColorChange (){
 for (i = 0; i < rows; i++){
     const rowdiv = document.createElement("div");
@@ -43,4 +42,3 @@ rowArray.forEach(rowdiv => {
 })};
 
 ColorChange();
-ChangeRowsColumns ();
