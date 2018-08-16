@@ -4,18 +4,8 @@ let columns = 4;
 let columnheight = (720/columns);
 let columnwidth = 960/columns;
 let rowheight = 745/rows;
-    const button1 = document.getElementById("rows");
-    const button2 = document.getElementById("columns");
-    button1.addEventListener("click",function buttonchange () {
-        console.log("called rows");
-        rows = Number(window.prompt("Set the number of rows:"));
-    })
-    button2.addEventListener("click",function buttonchange2 (){
-        console.log("called columns");
-        columns = Number(window.prompt("Set the number of columns:"));
-    })
 
-function ColorChange (){
+function InitializeSketchpad (){
 for (i = 0; i < rows; i++){
     const rowdiv = document.createElement("div");
     rowdiv.style.display = "inline-grid";
@@ -41,4 +31,17 @@ rowArray.forEach(rowdiv => {
 };
 })};
 
-ColorChange();
+InitializeSketchpad();
+const button1 = document.getElementById("rows");
+    const button2 = document.getElementById("columns");
+    button1.addEventListener("click",function buttonchange () {
+        console.log("called rows");
+        rows = Number(window.prompt("Set the number of rows:"));
+        ResetSketchpad();
+        InitializeSketchpad();
+    })
+    button2.addEventListener("click",function buttonchange2 (){
+        console.log("called columns");
+        columns = Number(window.prompt("Set the number of columns:"));
+        ResetSketchpad();
+    })
