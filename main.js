@@ -42,5 +42,5 @@ rowArray.forEach(rowdiv => {
 };
 })};
 
-ChangeRowsColumns ();
 ColorChange();
+ChangeRowsColumns ();
