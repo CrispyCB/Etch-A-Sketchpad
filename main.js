@@ -10,12 +10,10 @@ function ChangeRowsColumns () {
     button1.addEventListener("click",function buttonchange () {
         console.log("called rows");
         rows = Number(window.prompt("Set the number of rows:"));
-        window.location.reload(true);
     })
     button2.addEventListener("click",function buttonchange2 (){
         console.log("called columns");
         columns = Number(window.prompt("Set the number of columns:"));
-        window.location.reload(true);
     })
 };
 function ColorChange (){
