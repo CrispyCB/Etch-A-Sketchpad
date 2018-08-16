@@ -31,6 +31,20 @@ rowArray.forEach(rowdiv => {
 };
 })};
 
+function ResetSketchpad (){
+    let rowArray = sketchpad.querySelectorAll(".flex-row");
+    rowArray.forEach(rowdiv => {
+        for (k=0; k < rows;k++){
+            rowdiv.remove();
+        }
+    })
+    let columnArray = sketchpad.querySelectorAll(".flex-column");
+    columnArray.forEach(columndiv => {
+        for (L = 0;L < columns;L++){
+            columndiv.remove();
+        }
+    })
+}
 InitializeSketchpad();
 const button1 = document.getElementById("rows");
     const button2 = document.getElementById("columns");
