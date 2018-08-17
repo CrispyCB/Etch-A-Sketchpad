@@ -58,4 +58,5 @@ const button1 = document.getElementById("rows");
         console.log("called columns");
         columns = Number(window.prompt("Set the number of columns:"));
         ResetSketchpad();
+        InitializeSketchpad();
     })
