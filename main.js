@@ -1,10 +1,36 @@
 const sketchpad = document.getElementById("sketchpad");
-let rows = 4;
-let columns = 4;
+let rows;
+let columns;
 let columnheight = (720/columns);
 let columnwidth = 960/columns;
 let rowheight = 745/rows;
-
+function BasicSketchpad () {
+    const starterrows = 4;
+    const startercolumns = 4;
+    for (i = 0; i < starterrows; i++){
+        const rowdiv = document.createElement("div");
+        rowdiv.style.display = "inline-grid";
+        rowdiv.style.width = 960 + "px";
+        rowdiv.style.height = rowheight;
+        rowdiv.classList.add("flex-row");
+        sketchpad.appendChild(rowdiv);
+        console.log(i);
+    };
+    let rowArray = sketchpad.querySelectorAll(".flex-row");
+    rowArray.forEach(rowdiv => {
+        for (j= 0; j < startercolumns;j++){
+        const columndiv = document.createElement("div");
+        columndiv.style.display = "flex";
+        columndiv.style.width = columnwidth;
+        columndiv.style.height = columnheight;
+        columndiv.classList.add("flex-column");
+        columndiv.addEventListener("mouseover",()=>{
+            columndiv.style.backgroundColor = "black";
+        });
+        rowdiv.appendChild(columndiv);
+        console.log(j);
+    };
+    })};
 function InitializeSketchpad (){
 for (i = 0; i < rows; i++){
     const rowdiv = document.createElement("div");
@@ -45,7 +71,7 @@ function ResetSketchpad (){
         }
     })
 }
-InitializeSketchpad();
+BasicSketchpad();
 const button1 = document.getElementById("rows");
     const button2 = document.getElementById("columns");
     button1.addEventListener("click",function buttonchange () {
