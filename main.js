@@ -72,6 +72,7 @@ function ResetSketchpad (){
     })
 }
 BasicSketchpad();
+
 const button1 = document.getElementById("rows");
 const button2 = document.getElementById("columns");
     button1.addEventListener("click",function buttonchange () {
