@@ -13,11 +13,8 @@ button {
     border-radius: 25px;
 }
 #buttons {
-    display: inline-block;
-    width: 25%;
-    margin-left: 45%;
-    margin-right: 45%;
     margin-top: 14%;
+    margin-left: 37.5%;
 }
 #sketchpad {
     margin-left: 25%;
