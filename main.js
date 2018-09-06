@@ -1,4 +1,5 @@
 const sketchpad = document.getElementById("sketchpad");
+const buttons = document.getElementsByClassName('.colors');
 let rows;
 let columns;
 let columnheight = (576/columns);
@@ -49,8 +50,9 @@ rowArray.forEach(rowdiv => {
     columndiv.style.width = columnwidth;
     columndiv.style.height = columnheight;
     columndiv.classList.add("flex-column");
-    columndiv.addEventListener("mouseover",()=>{
-        columndiv.classList.add("midnight-black");
+    columndiv.addEventListener("mouseover",(mycolor)=>{
+      mycolor = "midnight-black";
+        columndiv.classList.add(mycolor);
     });
     rowdiv.appendChild(columndiv);
     console.log(j);
