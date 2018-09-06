@@ -1,7 +1,7 @@
 const sketchpad = document.getElementById("sketchpad");
 let rows;
 let columns;
-let columnheight = (720/columns);
+let columnheight = (576/columns);
 let columnwidth = 768/columns;
 let rowheight = 576/rows;
 function BasicSketchpad () {
