@@ -1,5 +1,4 @@
 const sketchpad = document.getElementById("sketchpad");
-const buttons = document.getElementsByClassName('.colors');
 let rows;
 let columns;
 let columnheight = (576/columns);
