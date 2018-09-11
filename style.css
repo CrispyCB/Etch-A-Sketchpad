@@ -25,8 +25,8 @@ li {
 #sketchpad {
     margin: 0 auto;
     margin-top: 5%;
-    width: 768px;
-    height: 576px;
+    width: 960px;
+    height: 720px;
     background-color: #ffffff;
     display: flex;
 }
