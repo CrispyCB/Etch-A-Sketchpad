@@ -1,6 +1,4 @@
 const sketchpad = document.getElementById("sketchpad");
-var colorPicker;
-const defaultColor = "#000000";
 let rows;
 let columns;
 let columnheight = 600/columns;
@@ -88,6 +86,5 @@ const button2 = document.getElementById("columns");
         InitializeSketchpad();
     })
 
-    //window.addEventListener("load",startpicker, false);
 
 
