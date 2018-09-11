@@ -27,7 +27,7 @@ function BasicSketchpad () {
         columndiv.style.height = columnheight;
         columndiv.classList.add("flex-column");
         columndiv.addEventListener("mouseover",()=>{
-            columndiv.classList.add("midnight-black");
+            columndiv.classList.add("default-color");
         });
         rowdiv.appendChild(columndiv);
         console.log(j);
