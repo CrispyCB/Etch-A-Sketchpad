@@ -18,52 +18,9 @@ label {
 li {
   padding-bottom: 10%;
 }
-ul {
-  list-style-type: none;
-  columns: 2;
-}
 .buttons {
     margin-top: 2%;
     margin-left: 37.5%;
-}
-.sap-green {
-  background-color: #0A3410;
-}
-.alizarin-crimson {
-  background-color: #4E1500;
-}
-.van-dyke-brown {
-  background-color: #221B15;
-}
-.dark-sienna {
-  background-color: #5F2E1F;
-}
-.midnight-black {
-  background-color: #000000;
-}
-.prussian-blue {
-  background-color: #021E44;
-}
-.phthalo-blue {
-  background-color: #0C0040;
-}
-.phthalo-green {
-  background-color: #102E3C;
-}
-.cadmium-yellow {
-  background-color: #FFEC00;
-}
-.yellow-ochre {
-  background-color: #C79B00;
-}
-.indian-yellow {
-  background-color: #FFB800;
-}
-.bright-red {
-  background-color: #DB0000;
-}
-#colors {
-    float: left;
 }
 #sketchpad {
     margin: 0 auto;
