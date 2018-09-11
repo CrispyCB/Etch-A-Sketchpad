@@ -31,8 +31,8 @@ li {
 #sketchpad {
     margin: 0 auto;
     margin-top: 5%;
-    width: 960px;
-    height: 720px;
+    width: 800px;
+    height: 600px;
     background-color: #ffffff;
     display: flex;
 }

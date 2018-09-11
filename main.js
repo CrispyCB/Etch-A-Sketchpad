@@ -1,16 +1,16 @@
 const sketchpad = document.getElementById("sketchpad");
 let rows;
 let columns;
-let columnheight = 720/columns;
-let columnwidth = 920/columns;
-let rowheight = 720/rows;
+let columnheight = 600/columns;
+let columnwidth = 800/columns;
+let rowheight = 600/rows;
 function BasicSketchpad () {
     const starterrows = 4;
     const startercolumns = 4;
     for (i = 0; i < starterrows; i++){
         const rowdiv = document.createElement("div");
         rowdiv.style.display = "inline-grid";
-        rowdiv.style.width = 768 + "px";
+        rowdiv.style.width = 600 + "px";
         rowdiv.style.height = rowheight;
         rowdiv.classList.add("flex-row");
         sketchpad.appendChild(rowdiv);
@@ -35,7 +35,7 @@ function InitializeSketchpad (){
 for (i = 0; i < rows; i++){
     const rowdiv = document.createElement("div");
     rowdiv.style.display = "inline-grid";
-    rowdiv.style.width = 768 + "px";
+    rowdiv.style.width = 600 + "px";
     rowdiv.style.height = rowheight;
     rowdiv.classList.add("flex-row");
     sketchpad.appendChild(rowdiv);
