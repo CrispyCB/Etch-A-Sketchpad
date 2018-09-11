@@ -1,9 +1,9 @@
 const sketchpad = document.getElementById("sketchpad");
 let rows;
 let columns;
-let columnheight = (576/columns);
-let columnwidth = 768/columns;
-let rowheight = 576/rows;
+let columnheight = 720/columns;
+let columnwidth = 920/columns;
+let rowheight = 720/rows;
 function BasicSketchpad () {
     const starterrows = 4;
     const startercolumns = 4;
@@ -76,7 +76,7 @@ BasicSketchpad();
 
 const button1 = document.getElementById("rows");
 const button2 = document.getElementById("columns");
-    button1.addEventListener("click",function buttonchange () {
+    button1.addEventListener("click",function buttonchange1 () {
         console.log("called rows");
         rows = Number(window.prompt("Set the number of rows:"));
         ResetSketchpad();
