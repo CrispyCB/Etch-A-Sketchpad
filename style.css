@@ -22,6 +22,12 @@ li {
     margin-top: 2%;
     margin-left: 37.5%;
 }
+.midnight-black {
+    background-color: #000000;
+}
+.sketch-cell {
+    border: 1px solid #76ff03;
+}
 #sketchpad {
     margin: 0 auto;
     margin-top: 5%;
@@ -30,6 +36,4 @@ li {
     background-color: #ffffff;
     display: flex;
 }
-.sketch-cell {
-    border: 1px solid #76ff03;
-}
+
