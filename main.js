@@ -1,4 +1,6 @@
 const sketchpad = document.getElementById("sketchpad");
+var colorPicker;
+const defaultColor = "#000000";
 let rows;
 let columns;
 let columnheight = 600/columns;
@@ -49,10 +51,6 @@ rowArray.forEach(rowdiv => {
     columndiv.style.width = columnwidth;
     columndiv.style.height = columnheight;
     columndiv.classList.add("flex-column");
-    columndiv.addEventListener("mouseover",(mycolor)=>{
-      mycolor = "midnight-black";
-        columndiv.classList.add(mycolor);
-    });
     rowdiv.appendChild(columndiv);
     console.log(j);
 };
@@ -72,6 +70,7 @@ function ResetSketchpad (){
         }
     })
 }
+
 BasicSketchpad();
 
 const button1 = document.getElementById("rows");
@@ -88,3 +87,7 @@ const button2 = document.getElementById("columns");
         ResetSketchpad();
         InitializeSketchpad();
     })
+
+    //window.addEventListener("load",startpicker, false);
+
+
