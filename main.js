@@ -49,6 +49,9 @@ rowArray.forEach(rowdiv => {
     columndiv.style.width = columnwidth;
     columndiv.style.height = columnheight;
     columndiv.classList.add("flex-column");
+    columndiv.addEventListener("mouseover",()=>{
+        columndiv.style.backgroundColor = "#000000";
+    });
     rowdiv.appendChild(columndiv);
     console.log(j);
 };
