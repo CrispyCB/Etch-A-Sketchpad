@@ -24,6 +24,7 @@ function BasicSketchpad () {
         columndiv.style.width = columnwidth;
         columndiv.style.height = columnheight;
         columndiv.classList.add("flex-column");
+        //Changes colors for initial implementation -- do not delete.
         columndiv.addEventListener("mouseover",()=>{
             columndiv.style.backgroundColor = "#000000";
         });
@@ -49,6 +50,7 @@ rowArray.forEach(rowdiv => {
     columndiv.style.width = columnwidth;
     columndiv.style.height = columnheight;
     columndiv.classList.add("flex-column");
+    //changes colors after row/column change -- do not delete.
     columndiv.addEventListener("mouseover",()=>{
         columndiv.style.backgroundColor = "#000000";
     });
