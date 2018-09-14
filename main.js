@@ -6,6 +6,12 @@ let columnwidth = 800/columns;
 let rowheight = 600/rows;
 var colorPicker;
 var defaultColor = "#000000";
+function startPicker() {
+    colorPicker = document.querySelector("#colorPicker");
+    colorPicker.value = defaultColor;
+    colorPicker.addEventListener("input", updateFirst, false);
+    colorPicker.addEventListener("change", updateAll, false);
+  }
 function BasicSketchpad () {
     const starterrows = 4;
     const startercolumns = 4;
@@ -75,7 +81,7 @@ function ResetSketchpad (){
         }
     })
 }
-
+window.addEventListener("load", startPicker, false);
 BasicSketchpad();
 
 const button1 = document.getElementById("rows");
