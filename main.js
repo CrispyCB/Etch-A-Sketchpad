@@ -4,6 +4,8 @@ let columns;
 let columnheight = 600/columns;
 let columnwidth = 800/columns;
 let rowheight = 600/rows;
+var colorPicker;
+var defaultColor = "#000000";
 function BasicSketchpad () {
     const starterrows = 4;
     const startercolumns = 4;
