@@ -14,12 +14,12 @@ function startPicker() {
   function updateFirst(event) {
     var dc = sketchpad.querySelectorAll(".default-color");
   
-    if (dc) {
+    if (dc) 
         dc.forEach(function(div) {
       div.style.backgroundColor = event.target.value;
         }
          ) }
-  }
+  
 function BasicSketchpad () {
     const starterrows = 4;
     const startercolumns = 4;
