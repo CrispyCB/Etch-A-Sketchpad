@@ -10,22 +10,22 @@ function startPicker() {
     colorPicker = document.querySelector("#colorPicker");
     colorPicker.value = defaultColor;
     colorPicker.addEventListener("input", updateFirst, false);
-    colorPicker.addEventListener("change", updateAll, false);
+    /*colorPicker.addEventListener("change", updateAll, false);*/
   }
   function updateFirst(event) {
     var dc = sketchpad.querySelectorAll(".default-color");
   
     if (dc) {
-        dc.forEach{
-      dc.style.backgroundColor = event.target.value;
+        dc.forEach(function(div) {
+      div.style.backgroundColor = event.target.value;
         }
-    }
+         ) }
   }
-  function updateAll(event) {
+  /*function updateAll(event) {
     document.querySelectorAll(".flex-column").forEach(function(div) {
-      div.style.color = event.target.value;
+      div.style.backgroundColor = event.target.value;
     });
-  }
+  }*/
 function BasicSketchpad () {
     const starterrows = 4;
     const startercolumns = 4;
@@ -48,7 +48,7 @@ function BasicSketchpad () {
         columndiv.classList.add("flex-column");
         //Changes colors for initial implementation -- do not delete.
         columndiv.addEventListener("mouseover",()=>{
-            columndiv.style.backgroundColor = "#000000";
+            columndiv.classList.add("default-color");
         });
         rowdiv.appendChild(columndiv);
         console.log(j);
@@ -74,7 +74,7 @@ rowArray.forEach(rowdiv => {
     columndiv.classList.add("flex-column");
     //changes colors after row/column change -- do not delete.
     columndiv.addEventListener("mouseover",()=>{
-        columndiv.style.backgroundColor = "#000000";
+        columndiv.classList.add("default-color");
     });
     rowdiv.appendChild(columndiv);
     console.log(j);
