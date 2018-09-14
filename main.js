@@ -12,6 +12,20 @@ function startPicker() {
     colorPicker.addEventListener("input", updateFirst, false);
     colorPicker.addEventListener("change", updateAll, false);
   }
+  function updateFirst(event) {
+    var dc = sketchpad.querySelectorAll(".default-color");
+  
+    if (dc) {
+        dc.forEach{
+      dc.style.backgroundColor = event.target.value;
+        }
+    }
+  }
+  function updateAll(event) {
+    document.querySelectorAll(".flex-column").forEach(function(div) {
+      div.style.color = event.target.value;
+    });
+  }
 function BasicSketchpad () {
     const starterrows = 4;
     const startercolumns = 4;
