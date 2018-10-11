@@ -108,13 +108,30 @@ var defaultColor = "#000000";
 //   ResetSketchpad();
 //   InitializeSketchpad();
 // });
-
-function Block(color) {
-  width = rows / 800;
-  height = columns / 600;
-  this.elem = document.createElement("div");
-  this.width = width;
-  this.height = height;
-  this.color = color;
+class Block {
+  constructor(color) {
+    this.width = `$()`;
+    this.height = `$()`;
+    this.color = color;
+    this.elem = document.createElement("div");
+  }
 }
-console.log(new Block("black"));
+
+class Grid {
+  constructor(rows, columns) {
+    this.rows = rows;
+    this.columns = columns;
+    this.matrix = [];
+  }
+
+  render() {
+    for (let i = 0; i < this.rows; i++) {
+      let row = [];
+      for (let j = 0; j < this.columns; j++) {
+        row.push(new Block());
+      }
+      this.matrix.push(row);
+    }
+  }
+}
+console.log(new Grid(4, 4).render());
