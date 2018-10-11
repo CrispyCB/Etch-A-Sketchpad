@@ -1,6 +1,6 @@
 const sketchpad = document.getElementById("sketchpad");
-let rows = 4;
-let columns = 4;
+let rows = 6;
+let columns = 6;
 let columnheight = 600 / columns;
 let columnwidth = 800 / columns;
 let rowheight = 600 / rows;
@@ -118,7 +118,7 @@ class Block {
 }
 
 class Grid {
-  constructor(rows, columns) {
+  constructor() {
     this.rows = rows;
     this.columns = columns;
     this.matrix = [];
@@ -127,11 +127,14 @@ class Grid {
   render() {
     for (let i = 0; i < rows; i++) {
       let row = [];
+      let column = [];
       for (let j = 0; j < columns; j++) {
-        row.push(new Block());
+        row.push(column);
+        column.push(new Block());
       }
       this.matrix.push(row);
+      return this.matrix;
     }
   }
 }
-console.log(new Grid(4, 4));
+console.log(new Grid(4, 4).render());
