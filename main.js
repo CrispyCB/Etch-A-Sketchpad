@@ -110,8 +110,8 @@ var defaultColor = "#000000";
 // });
 class Block {
   constructor(color) {
-    this.width = `$()`;
-    this.height = `$()`;
+    this.width = `$(800/4)`;
+    this.height = `$(600/4)`;
     this.color = color;
     this.elem = document.createElement("div");
   }
@@ -125,13 +125,13 @@ class Grid {
   }
 
   render() {
-    for (let i = 0; i < this.rows; i++) {
+    for (let i = 0; i < rows; i++) {
       let row = [];
-      for (let j = 0; j < this.columns; j++) {
+      for (let j = 0; j < columns; j++) {
         row.push(new Block());
       }
       this.matrix.push(row);
     }
   }
 }
-console.log(new Grid(4, 4).render());
+console.log(new Grid(4, 4));
