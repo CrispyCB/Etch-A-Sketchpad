@@ -137,4 +137,4 @@ class Grid {
     }
   }
 }
-console.log(new Grid(4, 4).render());
+console.log(new Grid().render());
