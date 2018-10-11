@@ -110,9 +110,9 @@ var defaultColor = "#000000";
 // });
 class Block {
   constructor(color) {
-    this.width = `$(800/4)`;
-    this.height = `$(600/4)`;
-    this.color = color;
+    this.width = columnheight;
+    this.height = columnwidth;
+    this.color = defaultColor;
     this.elem = document.createElement("div");
   }
 }
