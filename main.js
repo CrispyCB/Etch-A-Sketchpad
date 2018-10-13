@@ -136,5 +136,22 @@ class Grid {
       return this.matrix;
     }
   }
+
+  update() {
+    const button1 = document.getElementById("rows");
+    const button2 = document.getElementById("columns");
+    button1.addEventListener("click", function buttonchange1() {
+      console.log("called rows");
+      rows = Number(window.prompt("Set the number of rows:").value);
+      return rows.value;
+    });
+    button2.addEventListener("click", function buttonchange2() {
+      console.log("called columns");
+      columns = Number(window.prompt("Set the number of columns:").value);
+      return columns.value;
+    });
+  }
 }
+new Grid().render();
+new Grid().update();
 console.log(new Grid().render());
