@@ -123,6 +123,13 @@ class Grid {
     this.columns = columns;
     this.matrix = [];
   }
+  create() {
+    for (let i = 0; i < rows; i++) {
+      const row = document.createElement("div");
+      row.classList.add("row");
+      sketchpad.appendChild(row);
+    }
+  }
 
   render() {
     for (let i = 0; i < rows; i++) {
@@ -154,4 +161,4 @@ class Grid {
 }
 new Grid().render();
 new Grid().update();
-console.log(new Grid().render());
+console.log(new Grid().create());
