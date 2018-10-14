@@ -129,6 +129,14 @@ class Grid {
       row.classList.add("row");
       sketchpad.appendChild(row);
     }
+    let rowcount = sketchpad.querySelectorAll(".row");
+    rowcount.forEach(row => {
+      for (let c = 0; c < columns; c++) {
+        let column = document.createElement("div");
+        column.classList.add("column");
+        row.appendChild(column);
+      }
+    });
   }
 
   render() {
