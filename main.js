@@ -132,7 +132,7 @@ class Grid {
     let rowcount = sketchpad.querySelectorAll(".row");
     rowcount.forEach(row => {
       for (let c = 0; c < columns; c++) {
-        let column = document.createElement("div");
+        let column = new Block().elem;
         column.classList.add("column");
         row.appendChild(column);
       }
