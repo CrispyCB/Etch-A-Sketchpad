@@ -157,13 +157,13 @@ class Grid {
     const button2 = document.getElementById("columns");
     button1.addEventListener("click", function buttonchange1() {
       console.log("called rows");
-      rows = Number(window.prompt("Set the number of rows:").value);
-      return rows.value;
+      rows = Number(window.prompt("Set the number of rows:"));
+      return rows;
     });
     button2.addEventListener("click", function buttonchange2() {
       console.log("called columns");
-      columns = Number(window.prompt("Set the number of columns:").value);
-      return columns.value;
+      columns = Number(window.prompt("Set the number of columns:"));
+      return columns;
     });
   }
 }
