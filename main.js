@@ -168,5 +168,6 @@ class Grid {
   }
 }
 new Grid().render();
+new Grid().create();
 new Grid().update();
-console.log(new Grid().create());
+console.log(new Grid().render());
