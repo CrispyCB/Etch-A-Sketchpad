@@ -165,7 +165,8 @@ class Grid {
     });
   }
 }
-new Grid().render();
-new Grid().create();
-new Grid().update();
-console.log(new Grid().render());
+const grid = new Grid();
+grid.render();
+grid.create();
+grid.update();
+console.log(grid.render());
