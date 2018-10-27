@@ -165,6 +165,7 @@ class Grid {
     });
   }
 }
+//defines new instance of grid
 const grid = new Grid();
 grid.render();
 grid.create();
