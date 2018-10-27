@@ -158,12 +158,10 @@ class Grid {
     button1.addEventListener("click", function buttonchange1() {
       console.log("called rows");
       rows = Number(window.prompt("Set the number of rows:"));
-      return rows;
     });
     button2.addEventListener("click", function buttonchange2() {
       console.log("called columns");
       columns = Number(window.prompt("Set the number of columns:"));
-      return columns;
     });
   }
 }
