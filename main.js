@@ -1,4 +1,4 @@
-const sketchpad = document.getElementById("sketchpad");
+const SKETCHPAD = document.getElementById("SKETCHPAD");
 let rows = 6;
 let columns = 6;
 let columnheight = 600 / columns;
@@ -12,7 +12,7 @@ const defaultColor = "#000000";
 //   colorPicker.addEventListener("input", updateFirst, false);
 // }
 // function updateFirst(event) {
-//   var dc = sketchpad.querySelectorAll(".default-color");
+//   var dc = SKETCHPAD.querySelectorAll(".default-color");
 //
 //   if (dc)
 //     dc.forEach(function(div) {
@@ -20,7 +20,7 @@ const defaultColor = "#000000";
 //     });
 // }
 //
-// function BasicSketchpad() {
+// function BasicSKETCHPAD() {
 //   const starterrows = 4;
 //   const startercolumns = 4;
 //   for (i = 0; i < starterrows; i++) {
@@ -29,10 +29,10 @@ const defaultColor = "#000000";
 //     rowdiv.style.width = 600 + "px";
 //     rowdiv.style.height = rowheight;
 //     rowdiv.classList.add("flex-row");
-//     sketchpad.appendChild(rowdiv);
+//     SKETCHPAD.appendChild(rowdiv);
 //     console.log(i);
 //   }
-//   let rowArray = sketchpad.querySelectorAll(".flex-row");
+//   let rowArray = SKETCHPAD.querySelectorAll(".flex-row");
 //   rowArray.forEach(rowdiv => {
 //     for (j = 0; j < startercolumns; j++) {
 //       const columndiv = document.createElement("div");
@@ -49,17 +49,17 @@ const defaultColor = "#000000";
 //     }
 //   });
 // }
-// function InitializeSketchpad() {
+// function InitializeSKETCHPAD() {
 //   for (i = 0; i < rows; i++) {
 //     const rowdiv = document.createElement("div");
 //     rowdiv.style.display = "inline-grid";
 //     rowdiv.style.width = 600 + "px";
 //     rowdiv.style.height = rowheight;
 //     rowdiv.classList.add("flex-row");
-//     sketchpad.appendChild(rowdiv);
+//     SKETCHPAD.appendChild(rowdiv);
 //     console.log(i);
 //   }
-//   let rowArray = sketchpad.querySelectorAll(".flex-row");
+//   let rowArray = SKETCHPAD.querySelectorAll(".flex-row");
 //   rowArray.forEach(rowdiv => {
 //     for (j = 0; j < columns; j++) {
 //       const columndiv = document.createElement("div");
@@ -77,14 +77,14 @@ const defaultColor = "#000000";
 //   });
 // }
 //
-// function ResetSketchpad() {
-//   let rowArray = sketchpad.querySelectorAll(".flex-row");
+// function ResetSKETCHPAD() {
+//   let rowArray = SKETCHPAD.querySelectorAll(".flex-row");
 //   rowArray.forEach(rowdiv => {
 //     for (k = 0; k < rows; k++) {
 //       rowdiv.remove();
 //     }
 //   });
-//   let columnArray = sketchpad.querySelectorAll(".flex-column");
+//   let columnArray = SKETCHPAD.querySelectorAll(".flex-column");
 //   columnArray.forEach(columndiv => {
 //     for (L = 0; L < columns; L++) {
 //       columndiv.remove();
@@ -92,21 +92,21 @@ const defaultColor = "#000000";
 //   });
 // }
 // window.addEventListener("load", startPicker, false);
-// BasicSketchpad();
+// BasicSKETCHPAD();
 //
 // const button1 = document.getElementById("rows");
 // const button2 = document.getElementById("columns");
 // button1.addEventListener("click", function buttonchange1() {
 //   console.log("called rows");
 //   rows = Number(window.prompt("Set the number of rows:"));
-//   ResetSketchpad();
-//   InitializeSketchpad();
+//   ResetSKETCHPAD();
+//   InitializeSKETCHPAD();
 // });
 // button2.addEventListener("click", function buttonchange2() {
 //   console.log("called columns");
 //   columns = Number(window.prompt("Set the number of columns:"));
-//   ResetSketchpad();
-//   InitializeSketchpad();
+//   ResetSKETCHPAD();
+//   InitializeSKETCHPAD();
 // });
 class Block {
   constructor(color) {
@@ -127,9 +127,9 @@ class Grid {
     for (let i = 0; i < rows; i++) {
       const row = document.createElement("div");
       row.classList.add("row");
-      sketchpad.appendChild(row);
+      SKETCHPAD.appendChild(row);
     }
-    let rowcount = sketchpad.querySelectorAll(".row");
+    let rowcount = SKETCHPAD.querySelectorAll(".row");
     rowcount.forEach(row => {
       for (let c = 0; c < columns; c++) {
         let column = new Block().elem;
