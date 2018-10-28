@@ -4,8 +4,8 @@ let columns = 6;
 let columnheight = 600 / columns;
 let columnwidth = 800 / columns;
 let rowheight = 600 / rows;
-const colorPicker = "";
-const defaultColor = "#000000";
+const COLORPICKER = "";
+const DEFAULTCOLOR = "#000000";
 // function startPicker() {
 //   colorPicker = document.querySelector("#colorPicker");
 //   colorPicker.value = defaultColor;
@@ -112,7 +112,7 @@ class Block {
   constructor(color) {
     this.width = columnheight;
     this.height = columnwidth;
-    this.color = defaultColor;
+    this.color = DEFAULTCOLOR;
     this.elem = document.createElement("div");
   }
 }
