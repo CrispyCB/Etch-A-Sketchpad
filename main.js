@@ -4,7 +4,7 @@ let columns = 6;
 let columnheight = 600 / columns;
 let columnwidth = 800 / columns;
 let rowheight = 600 / rows;
-const colorPicker;
+const colorPicker = "";
 const defaultColor = "#000000";
 // function startPicker() {
 //   colorPicker = document.querySelector("#colorPicker");
