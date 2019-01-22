@@ -6,19 +6,30 @@ let columnwidth = 800/columns;
 let rowheight = 600/rows;
 var colorPicker;
 var defaultColor = "#000000";
+  
 function startPicker() {
     colorPicker = document.querySelector("#colorPicker");
     colorPicker.value = defaultColor;
     colorPicker.addEventListener("input", updateFirst, false);
+    colorPicker.addEventListener("change", watchColorPicker, false);
   }
-  function updateFirst(event) {
-    var dc = sketchpad.querySelectorAll(".default-color");
-  
+function updateFirst(event) {
+    let dc = sketchpad.querySelectorAll(".default-color");
+
     if (dc) 
         dc.forEach(function(div) {
-      div.style.backgroundColor = event.target.value;
+        div.style.backgroundColor = event.target.value;
+        div.classList.remove("default-color");
         }
-         ) }
+            ) }
+function watchColorPicker(event) {
+    let dc = sketchpad.querySelectorAll(".default-color");
+
+    if (dc) 
+        dc.forEach(function(div) {
+        div.style.backgroundColor = event.target.value;
+        }
+            ) }
   
 function BasicSketchpad () {
     const starterrows = 4;
