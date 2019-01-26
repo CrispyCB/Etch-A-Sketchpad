@@ -1,36 +1,11 @@
 const sketchpad = document.getElementById("sketchpad");
+
 let rows;
 let columns;
 let columnheight = 600/columns;
 let columnwidth = 800/columns;
 let rowheight = 600/rows;
-var colorPicker;
-var defaultColor = "#000000";
-  
-function startPicker() {
-    colorPicker = document.querySelector("#colorPicker");
-    colorPicker.value = defaultColor;
-    colorPicker.addEventListener("input", updateFirst, false);
-    colorPicker.addEventListener("change", watchColorPicker, false);
-  }
-function updateFirst(event) {
-    let dc = sketchpad.querySelectorAll(".default-color");
 
-    if (dc) 
-        dc.forEach(function(div) {
-        div.style.backgroundColor = event.target.value;
-        div.classList.remove("default-color");
-        }
-            ) }
-function watchColorPicker(event) {
-    let dc = sketchpad.querySelectorAll(".default-color");
-
-    if (dc) 
-        dc.forEach(function(div) {
-        div.style.backgroundColor = event.target.value;
-        }
-            ) }
-  
 function BasicSketchpad () {
     const starterrows = 4;
     const startercolumns = 4;
@@ -51,7 +26,7 @@ function BasicSketchpad () {
         columndiv.style.width = columnwidth;
         columndiv.style.height = columnheight;
         columndiv.classList.add("flex-column");
-        //Changes colors for initial implementation -- do not delete.
+        
         columndiv.addEventListener("mouseover",()=>{
             columndiv.classList.add("default-color");
         });
@@ -100,23 +75,25 @@ function ResetSketchpad (){
         }
     })
 }
-window.addEventListener("load", startPicker, false);
+
 BasicSketchpad();
 
-const button1 = document.getElementById("rows");
-const button2 = document.getElementById("columns");
-    button1.addEventListener("click",function buttonchange1 () {
-        console.log("called rows");
-        rows = Number(window.prompt("Set the number of rows:"));
-        ResetSketchpad();
-        InitializeSketchpad();
-    })
-    button2.addEventListener("click",function buttonchange2 (){
-        console.log("called columns");
-        columns = Number(window.prompt("Set the number of columns:"));
-        ResetSketchpad();
-        InitializeSketchpad();
-    })
+document.getElementById("apply").addEventListener("click", function set () {
+    rows = document.getElementById("rows-input").value;
+    columns = document.getElementById("columns-input").value;
+    color = document.getElementById("color-input").value;
+    function update() {
+            let dc = sketchpad.querySelectorAll(".default-color");
+        
+            if (dc) 
+                dc.forEach(function(div) {
+                div.style.backgroundColor = color;
+                div.classList.remove("default-color");
+                }
+                    ) }
+ResetSketchpad();
+InitializeSketchpad();
+update();
 
-
-
+}
+)
